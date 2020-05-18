@@ -1,12 +1,12 @@
 import { Schema, model, Document } from 'mongoose'
 
-interface UserType extends Document{
+interface PersonType extends Document{
   name: string,
   email: string,
-  friend ?: UserType
+  friend ?: PersonType
 }
 
-const UserSchema = new Schema({
+const PersonScheema = new Schema({
   name: {
     type: String,
     required: true
@@ -17,12 +17,12 @@ const UserSchema = new Schema({
   },
   friend: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'Person',
     required: false
   }
 })
 
-export default model('User', UserSchema)
+export default model('Person', PersonScheema)
 export {
-  UserType
+  PersonType
 }
