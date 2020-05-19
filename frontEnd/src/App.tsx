@@ -1,13 +1,19 @@
 import React from 'react';
 
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './routes'
+
 import './global.css'
+
+import Header from './components/Header'
 
 const App: React.FC = () => {
   return (
-    <div id="app">
-      <h1>Projeto Adireto</h1>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes />
+    </BrowserRouter>
   )
 }
 
-export default App;
+export default App
