@@ -6,6 +6,6 @@ import PersonRouter from './PersonRouter'
 const routes = Router()
 
 routes.use('/person', PersonRouter)
-routes.get('/draw', DrawController.create)
+routes.get('/draw', DrawController.draw)
 
 export default routes
