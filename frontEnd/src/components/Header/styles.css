@@ -1,4 +1,14 @@
 div.header{
+  display: flex;
   position: fixed;
   top: 0px;
+  width: 100vw;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background-color: #7f0000;
+  color: #fff;
+  font-weight: lighter;
+  font-size: 18px;
+  box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.77);
 }
