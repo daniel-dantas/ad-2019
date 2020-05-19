@@ -9,11 +9,21 @@ const PORT = 8000
 
 Mongo.connect()
 
+const cors: any = Cors()
+
+app.use(cors)
 app.use(json())
 app.use(Routes)
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Welcome to my life typescript')
+  res.send({
+    name: 'ad-2019-API',
+    version: '1.0.0',
+    author: {
+      name: 'Daniel Dantas',
+      email: 'daniel.dantas.developer@gmail.com'
+    }
+  })
 })
 
 app.listen(PORT, () => {

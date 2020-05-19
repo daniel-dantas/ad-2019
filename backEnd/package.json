@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "app.ts",
   "license": "MIT",
+  "author": {
+    "name": "Daniel Dantas",
+    "email": "daniel.dantas.developer@gmail.com"
+  },
   "scripts": {
     "start": "node ./dist/app.js",
     "dev": "nodemon ./src/app.ts",

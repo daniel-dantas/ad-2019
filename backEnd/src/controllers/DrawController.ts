@@ -6,7 +6,7 @@ import EmailService from '../services/EmailService'
 
 export default class DrawController {
 
-  public static async create(req: Request, res: Response){
+  public static async draw(req: Request, res: Response){
 
     const people = await Person.find() as PersonType[]
 
