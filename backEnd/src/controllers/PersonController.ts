@@ -23,7 +23,7 @@ export default class PersonController {
     let people = await Person.find() as PersonType[]
     let size = people.length
 
-    people = people.slice((page - 1) * 5, page * 5)
+    people = people.slice((page - 1) * 6, page * 6)
 
     res.header('X-Total-Count', size+'')
 
