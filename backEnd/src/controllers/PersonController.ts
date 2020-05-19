@@ -17,11 +17,11 @@ export default class PersonController {
 
   public static async read (req: Request, res: Response){
 
-    const persons = await Person.find() as PersonType[]
+    const people = await Person.find() as PersonType[]
 
     return res.status(200).send({
-      size: persons.length,
-      people: persons
+      size: people.length,
+      people: people
     })
 
   }

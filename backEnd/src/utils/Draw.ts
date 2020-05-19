@@ -20,7 +20,7 @@ export default class Draw {
     return array
   }
 
-  public static async next (people: PersonType[]){
+  public static next (people: PersonType[]) : PersonType{
 
     return this.shuffle(people).pop()
 
