@@ -21,7 +21,13 @@ export default class PersonController {
 
     return res.status(200).send({
       size: people.length,
-      people: people
+      people: people.map(person => {
+        return {
+          _id: person._id,
+          name: person.name,
+          email: person.email,
+        } as PersonType
+      })
     })
 
   }

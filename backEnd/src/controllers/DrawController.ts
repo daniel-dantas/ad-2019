@@ -2,6 +2,7 @@ import { Request, Response } from 'express'
 
 import Draw from '../utils/Draw'
 import Person, { PersonType } from '../models/Person'
+import EmailService from '../services/EmailService'
 
 export default class DrawController {
 
@@ -9,21 +10,26 @@ export default class DrawController {
 
     const people = await Person.find() as PersonType[]
 
-    const missingPeople = people.slice(0, people.length)
+    if (people.length < 4 || people.length % 2 ){
+      return res.status(404).send({message: 'To carry out the draw, the number of participants must be above three and even!'})
+    }
 
-    people.map(async person => {
+    const friendsList = people.slice(0, people.length)
 
-      let friend = Draw.next(missingPeople)
+    await people.map(async person => {
 
-      while(person._id === friend._id){
-        missingPeople.push(friend)
-        friend = Draw.next(missingPeople)
+      let friend = Draw.next(friendsList)
+
+      if(friend._id === person._id){
+        let mySelf = friend
+        friend = Draw.next(friendsList)
+        friendsList.push(mySelf)
       }
 
-      person.friend = friend._id
+      person.friend = friend
 
       await Person.updateOne({_id: person._id}, person)
-
+      await EmailService.send(person)
     })
 
     return res.status(200).send({message: 'Friends drawn!'})

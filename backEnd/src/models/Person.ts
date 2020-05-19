@@ -3,7 +3,7 @@ import { Schema, model, Document } from 'mongoose'
 interface PersonType extends Document{
   name: string,
   email: string,
-  friend ?: PersonType
+  friend ?: PersonType | null,
 }
 
 const PersonScheema = new Schema({
