@@ -40,7 +40,7 @@ export default class PersonController {
     const person: PersonType = req.body
 
     Person.updateOne({_id: person._id}, person).then(response => {
-      return res.status(200).send(response)
+      return res.status(200).send(person)
     }).catch(err => {
       return res.status(400).send({message: 'There is no person with this id'})
     })
@@ -49,7 +49,7 @@ export default class PersonController {
 
   public static async delete (req: Request, res: Response){
 
-    const { _id } = req.body as PersonType
+    const { _id } = req.headers
 
     Person.deleteOne({_id}).then(() => {
       return res.status(200).send({message: 'This person was successfully deleted'})

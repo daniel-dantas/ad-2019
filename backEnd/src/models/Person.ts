@@ -14,7 +14,6 @@ const PersonScheema = new Schema({
   email: {
     type: String,
     required: true,
-    unique: true
   },
   friend: {
     type: Schema.Types.ObjectId,

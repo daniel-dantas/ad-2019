@@ -16,6 +16,8 @@ export default function (req: Request, res: Response, next: NextFunction) {
 
   } else if (method === 'DELETE'){
 
+    const { _id } = req.headers
+
     if(!_id){
       return res.status(400).send({message: 'The request body is poorly formatted, the default is { _id }'})
     }
