@@ -17,18 +17,13 @@ export default class PersonController {
 
   public static async read (req: Request, res: Response){
 
-    
-    const { page = 1 } = req.query
-
     let people = await Person.find() as PersonType[]
     let size = people.length
-
-    people = people.slice((page - 1) * 6, page * 6)
 
     res.header('X-Total-Count', size+'')
 
     return res.status(200).send({
-      page,
+      size,
       people: people.map(person => {
         return {
           _id: person._id,
