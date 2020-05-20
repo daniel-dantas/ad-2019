@@ -16,6 +16,7 @@ const SucessDraw: React.FC = () => {
   return (
     <div id="sucessDraw">
       <h3>Sorteio realizado com sucesso!</h3>
+      <span>Foi enviado um email para cada pessoa com seu devido amigo secreto.</span>
       <MDBBtn color='green' onClick={clickButtonBack} className='btn-back-sucess'>
         Voltar para a home
       </MDBBtn>
