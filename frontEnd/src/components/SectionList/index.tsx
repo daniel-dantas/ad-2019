@@ -17,7 +17,6 @@ const SectionList: React.FC<Props> = ({ people }) => {
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState<PersonType[]>([])
 
-
   useEffect(() => {
     if(search.length){
       setFilter(people.filter(person => {
@@ -48,8 +47,8 @@ const SectionList: React.FC<Props> = ({ people }) => {
                   <MDBCol md='4'>{person.name}</MDBCol>
                   <MDBCol md='4'>{person.email}</MDBCol>
                   <MDBCol md='4'>
-                    <OperationsModal type='edit'/>
-                    <DeleteModal />
+                    <OperationsModal type='edit' person={person}/>
+                    <DeleteModal person={person}/>
                   </MDBCol>
                 </MDBRow>
               ))}

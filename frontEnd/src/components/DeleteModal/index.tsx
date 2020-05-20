@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { MDBIcon, MDBModal, MDBModalHeader, MDBModalBody } from 'mdbreact';
+import { MDBIcon, MDBModal, MDBModalHeader, MDBModalBody, MDBBtn } from 'mdbreact';
 
 import './styles.css'
+import PersonType from '../../types/PersonType';
 
 interface Props {
-    actionConfirm ?: Function
+    person: PersonType
 }
 
-const DeleteModal: React.FC<Props> = ({ actionConfirm }) => {
+const DeleteModal: React.FC<Props> = ({ person }) => {
   const [modalActive, setModalActive] = useState(false)
 
   const toggle = () => {
@@ -15,22 +16,20 @@ const DeleteModal: React.FC<Props> = ({ actionConfirm }) => {
   }
 
   const confirmAction = async () => {
-      if(actionConfirm){
-        actionConfirm()
-      }
+      
   }
 
   return (
       <>
-          <button className='btn-modal-exclusion orange' onClick={toggle}><MDBIcon icon='trash-alt' className='modal-icon-trash'/></button>
+          <MDBBtn className='btn-modal-exclusion' color='orange' onClick={toggle}><MDBIcon icon='trash-alt' className='modal-icon-trash'/></MDBBtn>
           <MDBModal className='modal-exclusion' isOpen={modalActive} toggle={toggle}>
               <MDBModalHeader toggle={toggle}>Exclusão</MDBModalHeader>
               <MDBModalBody>
                   Deseja realmente excluir essa pessoa?
               </MDBModalBody>
               <div className='modal-footer-exclusion'>
-                  <button className='cancel-button-exclusion' onClick={toggle}>Cancelar</button>
-                  <button className='confirm-button-exclusion' onClick={confirmAction}>Confirmar</button>
+                  <MDBBtn className='cancel-button-exclusion' color='red' onClick={toggle}>Cancelar</MDBBtn>
+                  <MDBBtn className='confirm-button-exclusion' color='green' onClick={confirmAction}>Confirmar</MDBBtn>
               </div>
           </MDBModal>
       </>

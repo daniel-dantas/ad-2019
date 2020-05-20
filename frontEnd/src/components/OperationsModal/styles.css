@@ -1,18 +1,18 @@
 .btn-add-person{
-  border: none;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   position: absolute;
   bottom: 20px;
   right: 25px;
-  color: #fff;
-  width: 120px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  font-size: 14px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  padding: 5px !important;
+  width: 150px;
+  height: 50px;
+  color: #fff !important;
+  border-radius: 30px !important;
   transition: filter 0.2s;
+  padding-left: 15px !important;
+  
 }
 
 .link-add-person:hover {
@@ -21,7 +21,10 @@
 }
 
 .icon-add-plus{
+  margin-left: -10px;
   margin-right: 10px;
+  font-size: 18px !important;
+
 }
 
 div.modal-footer-exclusion{
@@ -32,20 +35,11 @@ div.modal-footer-exclusion{
 }
 
 .cancel-button-exclusion, .confirm-button-exclusion{
-  border: none;
-  padding: 8px 30px;
+  width: 150px !important;
   margin: 8px 20px;
   color: #fff;
   border-radius: 5px;
   transition: filter 0.2s;
-}
-
-.modal-footer-exclusion .cancel-button-exclusion{
-  background-color: #e53935;
-}
-
-.modal-footer-exclusion .confirm-button-exclusion{
-  background-color: #2e7d32;
 }
 
 .cancel-button-exclusion:hover, .confirm-button-exclusion:hover{
@@ -62,11 +56,10 @@ form .form-control.operations-control{
 }
 
 .btn-edit-person{
-  border: none;
-  margin-right: 30px;
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
+  padding: 2px !important;
+  border-radius: 100% !important;
+  width: 35px !important;
+  height: 35px !important;
   color: black;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   transition: filter 0.2s;
