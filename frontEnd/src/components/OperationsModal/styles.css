@@ -15,6 +15,13 @@
   
 }
 
+@media(max-width: 770px){
+  .btn-add-person{
+    right: 15px;
+    bottom: 10px;
+  }
+}
+
 .link-add-person:hover {
   color: #fff;
   filter: brightness(90%);
@@ -27,12 +34,7 @@
 
 }
 
-div.modal-footer-exclusion{
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+
 
 .cancel-button-exclusion, .confirm-button-exclusion{
   width: 150px !important;

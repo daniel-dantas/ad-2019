@@ -40,7 +40,7 @@ const OperationsModal: React.FC<Props> = ({ type, person }) => {
     return (
         <>   
             {type === 'new' ? (
-                <MDBBtn className='btn-add-person' color='red' onClick={toggle}>
+                <MDBBtn className='btn-add-person' color='dark' onClick={toggle}>
                     <FaPlus className='icon-add-plus'/> Adicionar
                 </MDBBtn>
             ) : (

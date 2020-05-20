@@ -1,3 +1,26 @@
 * {
   margin: 0px;
 }
+
+body {
+  background-color: #424242 !important;
+}
+
+button.close{
+  color: #fff !important;
+}
+
+div.modal-body, div.modal-header{
+  border-color: #fff5ff !important;
+  color: #fff;
+  background-color: #6d6d6d !important;
+}
+
+
+div.modal-footer-exclusion{
+  border-color: #fff5ff !important;
+  text-align: center;
+  background-color: #6d6d6d !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

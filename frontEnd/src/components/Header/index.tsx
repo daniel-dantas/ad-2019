@@ -6,7 +6,7 @@ import './styles.css'
 
 const Header: React.FC = () => {
   return (
-      <MDBNavbar color='red' dark expand="md">
+      <MDBNavbar dark expand="md" className='header-content'>
         <MDBNavbarBrand>
           <MDBNavLink to='/'>
             <strong className="white-text">Amigo secreto da Adireto</strong>
