@@ -73,7 +73,7 @@ const SectionList: React.FC<Props> = ({ people }) => {
             
           </MDBCardBody>
           </MDBCard>
-          <p className='warning-text'>Obs.: Um amigo secreto só pode ser realizado se houver mais de 3 pessoas e um numero par de pessoas.</p>
+          <p className='warning-text-section'>Obs.: Um amigo secreto só pode ser realizado se houver mais de 3 pessoas e um numero par de pessoas.</p>
         </MDBCol>
       </MDBRow>
     </>
