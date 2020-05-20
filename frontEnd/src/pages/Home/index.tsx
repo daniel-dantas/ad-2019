@@ -13,8 +13,8 @@ import './styles.css'
 const Home: React.FC = () => {
 
   const [people, setPeople] = useState<PersonType[]>([
-    {name: 'Daniel', email: 'das@fd'},
-    {name: 'Dalina', email: 'dsda@daasd'}
+    {name: 'Daniel', email: 'das@fd', _id: 'da'},
+    {name: 'Dalina', email: 'dsda@daasd', _id: 'das'}
   ])
 
   return (
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <MDBContainer>
         <SectionList people={people} />
         <MDBRow center>
-          <MDBBtn color='blue'>Realizar Sorteio</MDBBtn>
+          <MDBBtn color='blue' className='draw-button-home'>Realizar Sorteio</MDBBtn>
         </MDBRow>
       </MDBContainer>
       <OperationModal type='new'/>
