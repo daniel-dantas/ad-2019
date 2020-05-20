@@ -3,12 +3,14 @@ import { MDBIcon, MDBModal, MDBModalHeader, MDBModalBody, MDBBtn } from 'mdbreac
 
 import './styles.css'
 import PersonType from '../../types/PersonType';
+import PersonService from '../../services/PersonService';
 
 interface Props {
-    person: PersonType
+    person: PersonType,
+    modifyChange: Function
 }
 
-const DeleteModal: React.FC<Props> = ({ person }) => {
+const DeleteModal: React.FC<Props> = ({ person, modifyChange }) => {
   const [modalActive, setModalActive] = useState(false)
 
   const toggle = () => {
@@ -17,6 +19,18 @@ const DeleteModal: React.FC<Props> = ({ person }) => {
 
   const confirmAction = async () => {
       
+    if(person._id){
+        const response = await PersonService.delete(person._id)
+
+        if(response){
+            modifyChange(person._id)
+        }
+
+
+    }
+
+    toggle()
+
   }
 
   return (

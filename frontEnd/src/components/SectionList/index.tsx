@@ -10,9 +10,10 @@ import OperationsModal from '../OperationsModal'
 
 interface Props {
   people: PersonType[]
+  modifyChange: Function
 }
 
-const SectionList: React.FC<Props> = ({ people }) => {
+const SectionList: React.FC<Props> = ({ people, modifyChange }) => {
 
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState<PersonType[]>([])
@@ -63,8 +64,8 @@ const SectionList: React.FC<Props> = ({ people }) => {
                     <MDBCol md='4'>{person.name}</MDBCol>
                     <MDBCol md='4'>{person.email}</MDBCol>
                     <MDBCol md='4'>
-                      <OperationsModal type='edit' person={person}/>
-                      <DeleteModal person={person}/>
+                      <OperationsModal type='edit' person={person} modifyChange={modifyChange}/>
+                      <DeleteModal person={person} modifyChange={modifyChange} />
                     </MDBCol>
                   </MDBRow>
                 ))}
