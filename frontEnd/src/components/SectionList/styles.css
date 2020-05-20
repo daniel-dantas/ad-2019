@@ -1,0 +1,32 @@
+.card-content-sectionList{
+  height: 60vh;
+}
+
+.card-item-container{
+  margin-top: -20px;
+}
+
+.section-person-list{
+  text-align: center;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+@media(max-width: 770px){
+  .section-person-list{
+    height: 120px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.body-card-section{
+  margin: 0px;
+  overflow-x: unset;
+  overflow-y: auto;
+}
+
