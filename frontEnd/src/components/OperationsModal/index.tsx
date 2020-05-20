@@ -48,7 +48,7 @@ const OperationsModal: React.FC<Props> = ({ type, person, modifyChange }) => {
             })
 
             if(response){
-                modifyChange(response)
+                modifyChange(await response)
             }
 
             setName('')
@@ -62,7 +62,7 @@ const OperationsModal: React.FC<Props> = ({ type, person, modifyChange }) => {
             })
 
             if(response){
-                modifyChange(response)
+                modifyChange(await response)
             }
 
         }

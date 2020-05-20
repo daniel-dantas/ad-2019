@@ -1,31 +1,27 @@
 {
-  "name": "ad-2019-API",
+  "name": "new-nodetype",
   "version": "1.0.0",
-  "main": "app.ts",
+  "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "Daniel Dantas",
-    "email": "daniel.dantas.developer@gmail.com"
-  },
   "scripts": {
     "start": "node ./dist/app.js",
     "dev": "nodemon ./src/app.ts",
     "build": "tsc -p ."
   },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/mongoose": "^5.7.21",
+    "@types/node": "^14.0.4",
+    "@types/nodemailer": "^6.4.0",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.14",
+    "mongoose": "^5.9.15",
     "nodemailer": "^6.4.6"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.6",
-    "@types/express": "^4.17.2",
-    "@types/mongoose": "^5.7.20",
-    "@types/node": "^13.1.8",
-    "@types/nodemailer": "^6.4.0",
-    "nodemon": "^2.0.2",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
   }
 }
