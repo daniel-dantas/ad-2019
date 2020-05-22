@@ -2,7 +2,7 @@
 
 Aplicação de sorteio de **Amigo Secreto** desenvolvida com **Node.js + Express e Typescript** no *back-end*, **MongoDB** como banco de dados e **React.js com Typescript** no *front-end*.
 
-**Obs.:** Os emails pedem ser visualizados no site [Ethereal](https://ethereal.email/)
+**Obs.: O sistema utiliza um serviço de SMTP fake, por isso os emails só podem ser visualizados no site [Ethereal](https://ethereal.email/)**
 
 Com o seguinte login
 
